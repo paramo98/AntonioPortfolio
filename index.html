@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobreMi">Sobre mí</a></li> 
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#datos">Datos de interés</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="div-sobreMi"> <!-- Auto descripción y una foto -->
+            <div class="div-foto">
+                <div class="tarjeta">
+                    <img src="imagenes/yo.jpg" alt="Yo" />
+                </div>
+            </div>
+            <div class="div-perfil">
+                <div class="tarjeta">
+                    <h1 id="sobreMi">Sobre mí</h1>
+                    <p>
+                        Hola, me llamo <span>Antonio José Martín Páramo,</span> soy de
+                        Almuñécar, tengo 26 años, y actualmente estoy estudiando un
+                        certificado profesional de
+                        <span>Confección y Publicación de Páginas Web.</span> Desde pequeño
+                        siempre he tenido un interés en el uso de ordenadores debido a mi
+                        temprana edad de su uso, porlo que decidí dar el paso y empezar a
+                        formarme en el desarrollo y la programación.
+                    </p>
+                    <p>
+                        Asimismo, cuento con otras formaciones académicas, teniendo de
+                        títulos el de
+                        <span>Técnico en Gestión Administrativa (2018),</span> y el de
+                        <span>Técnico Superior en Administración y Finanzas (2021),</span>
+                        además de la títulación oficial de <span>inglés nivel B1</span> por
+                        parte de Cambridge.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-proyectos"> <!-- Trabajos que he ido haciendo en el curso -->
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/ajedrez.png" alt="Ajedrez" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h1 id="proyectos">Proyectos realizados en el certificado profesional</h1>
+                    <h3>Ajedrez</h3>
+                    <p>Generador de tablero de ajedrez de tamaño ajustable. (HTML, CSS, JavaScript).
+                    </p>
+                    <button onclick="codigoAjedrez()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button> 
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/areas.png" alt="Areas" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Áreas</h3>
+                    <p>Página para calcular áreas poligonales de diferentes figuras geométricas. (HTML, CSS,
+                        JavaScript).
+                    </p>
+                    <button onclick="codigoAreas()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/cubos.png" alt="Cubos" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Cubos</h3>
+                    <p>Programa que pinte un número de contenedores de tamaño determinado puesto por el usuario,
+                        alternándolos. (HTML, CSS, JavaScript).
+                    </p>
+                    <button onclick="codigoCubos()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/dados.png" alt="Dados" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Dados</h3>
+                    <p>Simulación de lanzamiento de dados de 6, 10 y 20 caras, mostrándose el resultado. (HTML, CSS,
+                        JavaScript).
+                    </p>
+                    <button onclick="codigoDados()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/zodiaco.png" alt="Zodiaco" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Zodiaco</h3>
+                    <p>Página donde el usuario escribirá un signo del zodiaco y se le mostrará una imagen y una
+                        descripción de él. (HTML, CSS, JavaScript).
+                    </p>
+                    <button onclick="codigoZodiaco()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/tienda.png" alt="Tienda" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Tienda de zapatos</h3>
+                    <p>Landing responsiva de una tienda de zapatos utilizando una estructura y contenedores grid. (HTML,
+                        CSS).
+                    </p>
+                    <button onclick="codigoTienda()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+            <div class="div-fotoProyecto">
+                <div class="tarjeta">
+                    <img src="imagenes/bootstrap.png" alt="Bootstrap" />
+                </div>
+            </div>
+            <div class="div-descripcion">
+                <div class="tarjeta">
+                    <h3>Bootstrap</h3>
+                    <p>Landing page con diseño responsivo de una tienda de Samsung utilizando Bootstrap tanto para su
+                        organización como diseño. (Bootstrap).
+                    </p>
+                    <button onclick="codigoBootstrap()"><img src="imagenes/icono-github.png" alt="GitHub">Código</button>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <div class="div-experiencia"> <!-- Breve descripción de cada experiencia laboral que he tenido -->
+            <div class="tarjeta">
+                <h1 id="experiencia">Experiencia</h1>
+                <h3>2023-2024. GAME. Dependiente.</h3>
+                <p>
+                    Me encargaba de la atención al público, asi como de la organización
+                    del almacén, recepción de stock, reposición de productos, resolución
+                    de dudas, gestión de pagos y asesoramiento.
+                </p>
+            </div>
+            <div class="tarjeta">
+                <h3>2023-2024. Ayuntamiento de Almuñécar. Peón de jardinería.</h3>
+                <p>
+                    Trabajé manteniendo limpias las zonas verdes y jardines del pueblo,
+                    así como el riego y plantación, poda, control de malezas y hierba, y
+                    carga y descarga de camiones y uso de carretilla.
+
+                </p>
+            </div>
+            <div class="tarjeta">
+                <h3>2023-2024. 080 Formación. Agencia de colocación.</h3>
+                <p>
+                    Funciones específicas: selección de candidatos para ofertas de trabajo y su registro
+                    en la plataforma de la empresa, elaboración de itinerarios informativos y
+                    seguimiento del alumnado, y otras tareas administrativas.
+                </p>
+            </div>
+        </div>
+
+        <div class="div-datos"> <!-- Literalmente otros datos -->
+            <div class="tarjeta">
+                <h1 id="datos">Otros datos de interés</h1>
+                <p>
+                    Curso operario de almacén por la Cámara de Comercio de Granada
+                </p>
+            </div>
+            <div class="tarjeta">
+                <p>
+                    Carné de carretillero
+                </p>
+            </div>
+            <div class="tarjeta">
+                <p>
+                    Carné de manipulador de alimentos
+                </p>
+            </div>
+        </div>
+
+        <div class="div-contacto"> <!-- Forma de contactar conmigo -->
+            <div class="tarjeta">
+                <h1 id="contacto">Contacto</h1>
+                <p>¡Si quieres contacta conmigo a través del email o mi número de teléfono o rellena el formulario para
+                    algo
+                    más específico!</p>
+                <div class="info-contacto">
+
+                    <img src="imagenes/icono-correo.png">
+                    <p><span>Email:</span> antonioparamo98@gmail.com
+                </div>
+                <div class="info-contacto">
+                    <img src="imagenes/icono-telefono.png"><span>Núm.:</span> 647499261</p>
+                </div>
+
+                <form action="#" method="post" id="formulario">
+                    <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" />
+                    <span id="errorNombre"></span>
+                    <input type="email" name="correo" id="email" placeholder="Introduce tu email" />
+                    <span id="errorEmail"></span>
+                    <input type="text" name="asunto" id="asunto" placeholder="Asunto" />
+                    <span id="errorAsunto"></span>
+                    <textarea name="mensaje" id="texto" placeholder="Introduce un mensaje"></textarea>
+                    <span id="errorMensaje"></span>
+                    <input type="submit" id="btnSubmit" value="Enviar" />
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Antonio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
+
+</html>
